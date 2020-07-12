@@ -17,5 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/about', function () {
-    return view('about');
+
+    $data =[
+        
+        "message"=>"this is a message for about","totalprice"=> 4500,
+        "items"=>["Susuki","Honda","Jeep","Hyundai"]    ];
+    return view('about',$data);
+});
+Route::get('/contact', function () {
+    return view('contact');
 });
